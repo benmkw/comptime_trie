@@ -1,0 +1,120 @@
+rustc 1.48.0-nightly (fc2daaae6 2020-09-28)
+Darwin
+proc_test::main::full_trie_match_names:
+ push    rbp
+ .cfi_def_cfa_offset 16
+ .cfi_offset rbp, -16
+ mov     rbp, rsp
+ .cfi_def_cfa_register rbp
+ test    rsi, rsi
+ je      LBB18_24
+ mov     cl, byte, ptr, [rdi]
+ mov     al, 8
+ add     cl, -65
+ cmp     cl, 25
+ ja      LBB18_20
+ movzx   ecx, cl
+ lea     rdx, [rip, +, LJTI18_0]
+ movsxd  rcx, dword, ptr, [rdx, +, 4*rcx]
+ add     rcx, rdx
+ jmp     rcx
+LBB18_3:
+ cmp     rsi, 3
+ setne   al
+ shl     al, 2
+ add     al, 4
+ pop     rbp
+ ret
+LBB18_4:
+ cmp     rsi, 2
+ jb      LBB18_25
+ cmp     byte, ptr, [rdi, +, 1], 67
+ jne     LBB18_20
+ cmp     rsi, 3
+ jb      LBB18_26
+ cmp     byte, ptr, [rdi, +, 2], 67
+ jne     LBB18_20
+ cmp     rsi, 4
+ jb      LBB18_27
+ mov     cl, byte, ptr, [rdi, +, 3]
+ cmp     cl, 70
+ je      LBB18_23
+ cmp     cl, 66
+ je      LBB18_22
+ cmp     cl, 65
+ jne     LBB18_20
+ xor     eax, eax
+ cmp     rsi, 4
+ setne   al
+ lea     eax, [rax, +, 2*rax, +, 5]
+ pop     rbp
+ ret
+LBB18_13:
+ cmp     rsi, 2
+ jb      LBB18_25
+ mov     cl, byte, ptr, [rdi, +, 1]
+ cmp     cl, 76
+ je      LBB18_21
+ cmp     cl, 65
+ jne     LBB18_20
+ cmp     rsi, 3
+ mov     ecx, 1
+ mov     eax, 8
+ cmove   eax, ecx
+ pop     rbp
+ ret
+LBB18_18:
+ cmp     rsi, 3
+ setne   al
+ shl     al, 3
+ pop     rbp
+ ret
+LBB18_19:
+ xor     eax, eax
+ cmp     rsi, 1
+ setne   al
+ lea     eax, [rax, +, 4*rax, +, 3]
+LBB18_20:
+ pop     rbp
+ ret
+LBB18_21:
+ cmp     rsi, 4
+ mov     ecx, 2
+ mov     eax, 8
+ cmove   eax, ecx
+ pop     rbp
+ ret
+LBB18_22:
+ cmp     rsi, 4
+ setne   al
+ add     al, al
+ add     al, 6
+ pop     rbp
+ ret
+LBB18_23:
+ cmp     rsi, 4
+ sete    cl
+ mov     al, 8
+ sub     al, cl
+ pop     rbp
+ ret
+LBB18_24:
+ lea     rdx, [rip, +, l___unnamed_24]
+ xor     edi, edi
+ xor     esi, esi
+ call    core::panicking::panic_bounds_check
+LBB18_25:
+ lea     rdx, [rip, +, l___unnamed_24]
+ mov     edi, 1
+ mov     esi, 1
+ call    core::panicking::panic_bounds_check
+LBB18_26:
+ lea     rdx, [rip, +, l___unnamed_24]
+ mov     edi, 2
+ mov     esi, 2
+ call    core::panicking::panic_bounds_check
+LBB18_27:
+ lea     rdx, [rip, +, l___unnamed_24]
+ mov     edi, 3
+ mov     esi, 3
+ call    core::panicking::panic_bounds_check

@@ -1,0 +1,95 @@
+rustc 1.48.0-nightly (fc2daaae6 2020-09-28)
+Darwin
+[0m[1m[38;5;9mproc_test::main::just_match_names:
+[0m [0m[1m[38;5;12mpush   [0m rbp
+[0m .cfi_def_cfa_offset 16
+[0m .cfi_offset rbp, -16
+[0m [0m[1m[38;5;12mmov    [0m rbp, rsp
+[0m .cfi_def_cfa_register rbp
+[0m [0m[1m[38;5;12mcmp    [0m rsi, 1
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_9
+[0m [0m[1m[38;5;12mcmp    [0m rsi, 4
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_12
+[0m [0m[1m[38;5;12mcmp    [0m rsi, 3
+[0m [0m[1m[38;5;12mjne    [0m[1m[38;5;10m LBB15_11
+[0m [0m[1m[38;5;12mlea    [0m rax, [rip, +, l___unnamed_5]
+[0m [0m[1m[38;5;12mcmp    [0m rdi, rax
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_23
+[0m [0m[1m[38;5;12mmovzx  [0m eax, word, ptr, [rdi]
+[0m [0m[1m[38;5;12mxor    [0m eax, 20294
+[0m [0m[1m[38;5;12mmovzx  [0m ecx, byte, ptr, [rdi, +, 2]
+[0m [0m[1m[38;5;12mxor    [0m ecx, 79
+[0m [0m[1m[38;5;12mor     [0m cx, ax
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_23
+[0m [0m[1m[38;5;12mmov    [0m al, 1
+[0m [0m[1m[38;5;12mlea    [0m rcx, [rip, +, l___unnamed_6]
+[0m [0m[1m[38;5;12mcmp    [0m rdi, rcx
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_21
+[0m [0m[1m[38;5;12mmovzx  [0m ecx, word, ptr, [rdi]
+[0m [0m[1m[38;5;12mxor    [0m ecx, 16706
+[0m [0m[1m[38;5;12mmovzx  [0m edx, byte, ptr, [rdi, +, 2]
+[0m [0m[1m[38;5;12mxor    [0m edx, 82
+[0m [0m[1m[38;5;12mor     [0m dx, cx
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_21
+[0m [0m[1m[38;5;12mlea    [0m rax, [rip, +, l___unnamed_9]
+[0m [0m[1m[38;5;12mcmp    [0m rdi, rax
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_24
+[0m [0m[1m[38;5;12mmovzx  [0m eax, word, ptr, [rdi]
+[0m [0m[1m[38;5;12mxor    [0m eax, 16705
+[0m [0m[1m[38;5;12mmovzx  [0m ecx, byte, ptr, [rdi, +, 2]
+[0m [0m[1m[38;5;12mxor    [0m ecx, 66
+[0m [0m[1m[38;5;12mor     [0m cx, ax
+[0m [0m[1m[38;5;12msetne  [0m al
+[0m [0m[1m[38;5;12mshl    [0m al, 2
+[0m [0m[1m[38;5;12madd    [0m al, 4
+[0m [0m[1m[38;5;12mpop    [0m rbp
+[0m [0m[1m[38;5;12mret[0m
+[0m[0m[1m[38;5;10mLBB15_9:
+[0m [0m[1m[38;5;12mmov    [0m al, 3
+[0m [0m[1m[38;5;12mlea    [0m rcx, [rip, +, l___unnamed_8]
+[0m [0m[1m[38;5;12mcmp    [0m rdi, rcx
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_21
+[0m [0m[1m[38;5;12mcmp    [0m byte, ptr, [rdi], 90
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_21
+[0m[0m[1m[38;5;10mLBB15_11:
+[0m [0m[1m[38;5;12mmov    [0m al, 8
+[0m [0m[1m[38;5;12mpop    [0m rbp
+[0m [0m[1m[38;5;12mret[0m
+[0m[0m[1m[38;5;10mLBB15_12:
+[0m [0m[1m[38;5;12mmov    [0m al, 2
+[0m [0m[1m[38;5;12mlea    [0m rcx, [rip, +, L___unnamed_7]
+[0m [0m[1m[38;5;12mcmp    [0m rdi, rcx
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_21
+[0m [0m[1m[38;5;12mcmp    [0m dword, ptr, [rdi], 1112886338
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_21
+[0m [0m[1m[38;5;12mmov    [0m al, 5
+[0m [0m[1m[38;5;12mlea    [0m rcx, [rip, +, L___unnamed_10]
+[0m [0m[1m[38;5;12mcmp    [0m rdi, rcx
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_21
+[0m [0m[1m[38;5;12mcmp    [0m dword, ptr, [rdi], 1094927171
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_21
+[0m [0m[1m[38;5;12mmov    [0m al, 6
+[0m [0m[1m[38;5;12mlea    [0m rcx, [rip, +, L___unnamed_11]
+[0m [0m[1m[38;5;12mcmp    [0m rdi, rcx
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_21
+[0m [0m[1m[38;5;12mcmp    [0m dword, ptr, [rdi], 1111704387
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_21
+[0m [0m[1m[38;5;12mlea    [0m rax, [rip, +, L___unnamed_12]
+[0m [0m[1m[38;5;12mcmp    [0m rdi, rax
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB15_20
+[0m [0m[1m[38;5;12mcmp    [0m dword, ptr, [rdi], 1178813251
+[0m [0m[1m[38;5;12mmov    [0m al, 8
+[0m [0m[1m[38;5;12mjne    [0m[1m[38;5;10m LBB15_21
+[0m[0m[1m[38;5;10mLBB15_20:
+[0m [0m[1m[38;5;12mmov    [0m al, 7
+[0m[0m[1m[38;5;10mLBB15_21:
+[0m [0m[1m[38;5;12mpop    [0m rbp
+[0m [0m[1m[38;5;12mret[0m
+[0m[0m[1m[38;5;10mLBB15_23:
+[0m [0m[1m[38;5;12mxor    [0m eax, eax
+[0m [0m[1m[38;5;12mpop    [0m rbp
+[0m [0m[1m[38;5;12mret[0m
+[0m[0m[1m[38;5;10mLBB15_24:
+[0m [0m[1m[38;5;12mmov    [0m al, 4
+[0m [0m[1m[38;5;12mpop    [0m rbp
+[0m [0m[1m[38;5;12mret[0m

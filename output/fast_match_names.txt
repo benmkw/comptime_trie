@@ -1,0 +1,51 @@
+rustc 1.48.0-nightly (fc2daaae6 2020-09-28)
+Darwin
+[0m[1m[38;5;9mproc_test::main::fast_match_names:
+[0m [0m[1m[38;5;12mpush   [0m rbp
+[0m .cfi_def_cfa_offset 16
+[0m .cfi_offset rbp, -16
+[0m [0m[1m[38;5;12mmov    [0m rbp, rsp
+[0m .cfi_def_cfa_register rbp
+[0m [0m[1m[38;5;12mmov    [0m cl, byte, ptr, [rdi]
+[0m [0m[1m[38;5;12mmov    [0m al, 4
+[0m [0m[1m[38;5;12madd    [0m cl, -65
+[0m [0m[1m[38;5;12mmovzx  [0m ecx, cl
+[0m [0m[1m[38;5;12mlea    [0m rdx, [rip, +, LJTI17_0]
+[0m [0m[1m[38;5;12mmovsxd [0m rcx, dword, ptr, [rdx, +, 4*rcx]
+[0m [0m[1m[38;5;12madd    [0m rcx, rdx
+[0m [0m[1m[38;5;12mjmp    [0m[1m[38;5;10m rcx
+[0m[0m[1m[38;5;10mLBB17_2:
+[0m [0m[1m[38;5;12mcmp    [0m byte, ptr, [rdi, +, 1], 65
+[0m [0m[1m[38;5;12msete   [0m cl
+[0m [0m[1m[38;5;12mmov    [0m al, 2
+[0m [0m[1m[38;5;12msub    [0m al, cl
+[0m [0m[1m[38;5;12mpop    [0m rbp
+[0m [0m[1m[38;5;12mret[0m
+[0m[0m[1m[38;5;10mLBB17_8:
+[0m [0m[1m[38;5;12mxor    [0m eax, eax
+[0m [0m[1m[38;5;12mpop    [0m rbp
+[0m [0m[1m[38;5;12mret[0m
+[0m[0m[1m[38;5;10mLBB17_3:
+[0m [0m[1m[38;5;12mmov    [0m al, byte, ptr, [rdi, +, 3]
+[0m [0m[1m[38;5;12mcmp    [0m al, 65
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB17_4
+[0m [0m[1m[38;5;12mcmp    [0m al, 66
+[0m [0m[1m[38;5;12mje     [0m[1m[38;5;10m LBB17_6
+[0m [0m[1m[38;5;12mmov    [0m al, 7
+[0m [0m[1m[38;5;12mpop    [0m rbp
+[0m [0m[1m[38;5;12mret[0m
+[0m[0m[1m[38;5;10mLBB17_9:
+[0m [0m[1m[38;5;12mmov    [0m al, 3
+[0m[0m[1m[38;5;10mLBB17_10:
+[0m [0m[1m[38;5;12mpop    [0m rbp
+[0m [0m[1m[38;5;12mret[0m
+[0m[0m[1m[38;5;10mLBB17_4:
+[0m [0m[1m[38;5;12mmov    [0m al, 5
+[0m [0m[1m[38;5;12mpop    [0m rbp
+[0m [0m[1m[38;5;12mret[0m
+[0m[0m[1m[38;5;10mLBB17_6:
+[0m [0m[1m[38;5;12mmov    [0m al, 6
+[0m [0m[1m[38;5;12mpop    [0m rbp
+[0m [0m[1m[38;5;12mret[0m
+[0m[0m[1m[38;5;10mLBB17_1:
+[0m [0m[1m[38;5;12mud2[0m

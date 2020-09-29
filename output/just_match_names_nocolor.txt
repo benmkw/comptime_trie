@@ -1,0 +1,95 @@
+rustc 1.48.0-nightly (fc2daaae6 2020-09-28)
+Darwin
+proc_test::main::just_match_names:
+ push    rbp
+ .cfi_def_cfa_offset 16
+ .cfi_offset rbp, -16
+ mov     rbp, rsp
+ .cfi_def_cfa_register rbp
+ cmp     rsi, 1
+ je      LBB15_9
+ cmp     rsi, 4
+ je      LBB15_12
+ cmp     rsi, 3
+ jne     LBB15_11
+ lea     rax, [rip, +, l___unnamed_5]
+ cmp     rdi, rax
+ je      LBB15_23
+ movzx   eax, word, ptr, [rdi]
+ xor     eax, 20294
+ movzx   ecx, byte, ptr, [rdi, +, 2]
+ xor     ecx, 79
+ or      cx, ax
+ je      LBB15_23
+ mov     al, 1
+ lea     rcx, [rip, +, l___unnamed_6]
+ cmp     rdi, rcx
+ je      LBB15_21
+ movzx   ecx, word, ptr, [rdi]
+ xor     ecx, 16706
+ movzx   edx, byte, ptr, [rdi, +, 2]
+ xor     edx, 82
+ or      dx, cx
+ je      LBB15_21
+ lea     rax, [rip, +, l___unnamed_9]
+ cmp     rdi, rax
+ je      LBB15_24
+ movzx   eax, word, ptr, [rdi]
+ xor     eax, 16705
+ movzx   ecx, byte, ptr, [rdi, +, 2]
+ xor     ecx, 66
+ or      cx, ax
+ setne   al
+ shl     al, 2
+ add     al, 4
+ pop     rbp
+ ret
+LBB15_9:
+ mov     al, 3
+ lea     rcx, [rip, +, l___unnamed_8]
+ cmp     rdi, rcx
+ je      LBB15_21
+ cmp     byte, ptr, [rdi], 90
+ je      LBB15_21
+LBB15_11:
+ mov     al, 8
+ pop     rbp
+ ret
+LBB15_12:
+ mov     al, 2
+ lea     rcx, [rip, +, L___unnamed_7]
+ cmp     rdi, rcx
+ je      LBB15_21
+ cmp     dword, ptr, [rdi], 1112886338
+ je      LBB15_21
+ mov     al, 5
+ lea     rcx, [rip, +, L___unnamed_10]
+ cmp     rdi, rcx
+ je      LBB15_21
+ cmp     dword, ptr, [rdi], 1094927171
+ je      LBB15_21
+ mov     al, 6
+ lea     rcx, [rip, +, L___unnamed_11]
+ cmp     rdi, rcx
+ je      LBB15_21
+ cmp     dword, ptr, [rdi], 1111704387
+ je      LBB15_21
+ lea     rax, [rip, +, L___unnamed_12]
+ cmp     rdi, rax
+ je      LBB15_20
+ cmp     dword, ptr, [rdi], 1178813251
+ mov     al, 8
+ jne     LBB15_21
+LBB15_20:
+ mov     al, 7
+LBB15_21:
+ pop     rbp
+ ret
+LBB15_23:
+ xor     eax, eax
+ pop     rbp
+ ret
+LBB15_24:
+ mov     al, 4
+ pop     rbp
+ ret

@@ -1,0 +1,86 @@
+rustc 1.48.0-nightly (fc2daaae6 2020-09-28)
+Darwin
+proc_test::main::array_match_names:
+ push    rbp
+ .cfi_def_cfa_offset 16
+ .cfi_offset rbp, -16
+ mov     rbp, rsp
+ .cfi_def_cfa_register rbp
+ cmp     rsi, 1
+ je      LBB16_8
+ mov     al, 8
+ cmp     rsi, 4
+ je      LBB16_9
+ cmp     rsi, 3
+ jne     LBB16_23
+ mov     cl, byte, ptr, [rdi]
+ cmp     cl, 65
+ je      LBB16_18
+ cmp     cl, 66
+ je      LBB16_20
+ cmp     cl, 70
+ jne     LBB16_23
+ cmp     byte, ptr, [rdi, +, 1], 79
+ jne     LBB16_23
+ cmp     byte, ptr, [rdi, +, 2], 79
+ setne   al
+ shl     al, 3
+ pop     rbp
+ ret
+LBB16_8:
+ xor     eax, eax
+ cmp     byte, ptr, [rdi], 90
+ setne   al
+ lea     eax, [rax, +, 4*rax, +, 3]
+LBB16_23:
+ pop     rbp
+ ret
+LBB16_9:
+ mov     cl, byte, ptr, [rdi]
+ cmp     cl, 67
+ je      LBB16_14
+ cmp     cl, 66
+ jne     LBB16_23
+ cmp     byte, ptr, [rdi, +, 1], 76
+ jne     LBB16_23
+ cmp     byte, ptr, [rdi, +, 2], 85
+ jne     LBB16_23
+ cmp     byte, ptr, [rdi, +, 3], 66
+ mov     ecx, 2
+ mov     eax, 8
+ cmove   eax, ecx
+ pop     rbp
+ ret
+LBB16_14:
+ cmp     byte, ptr, [rdi, +, 1], 67
+ jne     LBB16_23
+ cmp     byte, ptr, [rdi, +, 2], 67
+ jne     LBB16_23
+ mov     cl, byte, ptr, [rdi, +, 3]
+ add     cl, -65
+ cmp     cl, 6
+ jae     LBB16_23
+ movzx   ecx, cl
+ shl     ecx, 3
+ movabs  rax, 7731075876357
+ shr     rax, cl
+ pop     rbp
+ ret
+LBB16_18:
+ cmp     byte, ptr, [rdi, +, 1], 65
+ jne     LBB16_23
+ cmp     byte, ptr, [rdi, +, 2], 66
+ setne   al
+ shl     al, 2
+ add     al, 4
+ pop     rbp
+ ret
+LBB16_20:
+ cmp     byte, ptr, [rdi, +, 1], 65
+ jne     LBB16_23
+ cmp     byte, ptr, [rdi, +, 2], 82
+ mov     ecx, 1
+ mov     eax, 8
+ cmove   eax, ecx
+ pop     rbp
+ ret
